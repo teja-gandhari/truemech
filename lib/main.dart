@@ -1,5 +1,7 @@
 import  'package:flutter/material.dart';
 
+import 'login.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'True Mech',
+      home: Login(),
     );
   }
 }
