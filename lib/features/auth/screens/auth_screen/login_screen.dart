@@ -16,7 +16,6 @@ class _LoginAuthState extends State<LoginAuth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       body: SafeArea(
         child: Center(
           child: SizedBox(

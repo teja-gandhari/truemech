@@ -6,7 +6,6 @@ class SingUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       appBar: AppBar(
         title: const Text('Sing Up'),
       ),

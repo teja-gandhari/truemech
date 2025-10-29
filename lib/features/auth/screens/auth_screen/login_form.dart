@@ -14,7 +14,6 @@ class LoginPage extends StatelessWidget {
     final _formKey = GlobalKey<FormState>();
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
