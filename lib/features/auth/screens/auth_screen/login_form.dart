@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:truemech/core/widgets/custome_button.dart';
-import '../../../core/widgets/custom_textfield.dart';
+import '../../../../core/widgets/custom_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

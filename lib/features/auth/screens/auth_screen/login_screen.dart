@@ -1,8 +1,8 @@
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:truemech/features/auth/screens/login_form.dart';
-import 'package:truemech/features/auth/screens/singup_form.dart';
+import 'package:truemech/features/auth/screens/auth_screen/login_form.dart';
+import 'package:truemech/features/auth/screens/auth_screen/singup_form.dart';
 
 class LoginAuth extends StatefulWidget {
   const LoginAuth({super.key});

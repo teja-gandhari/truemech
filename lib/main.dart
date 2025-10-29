@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/theme/app_theme.dart';
 import 'core/theme/text_theme.dart';
-import 'features/auth/screens/login_screen.dart';
+import 'features/auth/screens/auth_screen/login_screen.dart';
 
 void main(){
   runApp(const MyApp());
