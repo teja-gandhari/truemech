@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:truemech/core/widgets/custom_icons_buttons.dart';
 import 'package:truemech/core/widgets/custome_button.dart';
 import '../../../../core/widgets/custom_textfield.dart';
 
@@ -9,24 +10,25 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
+
     final _formKey = GlobalKey<FormState>();
 
     return Padding(
         padding: const EdgeInsets.all(8.0),
         child: SafeArea(
           child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
+              physics: NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
             child: Form(
               key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Email",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                  ),
+                  //email
+                  _labelText('Email', 18),
                   const SizedBox(height: 4),
                   CustomTextField(
                     controller: emailController,
@@ -36,10 +38,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   Row(
                     children: <Widget>[
-                      const Text(
-                        "Password",
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
+                      _labelText('Password', 18),
                       const Spacer(),
                       TextButton(
                         onPressed: () {},
@@ -60,7 +59,24 @@ class LoginPage extends StatelessWidget {
                     borderRadius: 18.0,
                     child: const Text('Login',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18,color:Colors.white ),),
                   ),
-                  const SizedBox(height: 14,),
+                  const SizedBox(height: 48,),
+                  //divider
+                  Row(
+                    children: [
+                      Expanded(child: Divider(thickness: 0.8,color: Colors.grey,)),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'Or continue with',
+                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                        ),
+                      ),
+                      Expanded(child: Divider(thickness: 0.8,color: Colors.grey,)),
+                    ],
+                  ),
+                  const SizedBox(height: 36),
+                  //bottomsIcons
+                  _bottomsIcons(),
 
                 ],
               ),
@@ -69,4 +85,25 @@ class LoginPage extends StatelessWidget {
         ),
     );
   }
+  //text
+  Widget _labelText(String name,double fontSize){
+    return Text(name,style: TextStyle(fontSize: fontSize,fontWeight: FontWeight.w500),);
+  }
+  //bottom icons
+  Widget _bottomsIcons(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        CustomIconsButtons(onPressed: _onGoogleButtonPress, icon: FontAwesomeIcons.google),
+        CustomIconsButtons(onPressed: _onAppleButtonPress, icon: FontAwesomeIcons.apple),
+        CustomIconsButtons(onPressed: _onFacebookButtonPress, icon: FontAwesomeIcons.facebookF),
+      ],
+    );
+  }
+  static void _onGoogleButtonPress(){}
+  static void _onAppleButtonPress(){}
+  static void _onFacebookButtonPress(){}
+
+
+
 }

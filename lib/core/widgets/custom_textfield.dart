@@ -26,6 +26,7 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         textCapitalization: textCapitalization,
         keyboardType: keyboardType,
+
         obscureText: obscureText,
         textAlign: TextAlign.start,
         style: TextStyle(
