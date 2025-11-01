@@ -1,21 +1,16 @@
-import 'package:flutter/material.dart';
+
 import 'package:go_router/go_router.dart';
 import 'package:truemech/features/auth/screens/auth_screen/login_screen.dart';
 
-class MyAppRouter{
-
-  GoRouter router = GoRouter(
+class MyAppRouter {
+  final GoRouter router = GoRouter(
+    initialLocation: '/',
     routes: [
-      //Login_screen
       GoRoute(
         name: 'loginAuth',
         path: '/',
-        pageBuilder: (context,state){
-          return MaterialPage(child: LoginAuth());
-        }
-      )
-
-    ]
-
+        builder: (context, state) => const LoginAuth(),
+      ),
+    ],
   );
 }
