@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:truemech/features/auth/auth_screen/login_screen.dart';
-
 import '../../../core/widgets/custome_button.dart';
 import 'intro_screens/intro_pages.dart';
 
