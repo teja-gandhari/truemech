@@ -1,7 +1,6 @@
 import  'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app/routes/app_route_config.dart';
-import 'features/auth/screens/auth_screen/login_screen.dart';
 
 void main(){
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,6 +9,8 @@ void main(){
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  // Create one instance here
+  static final _appRouter = MyAppRouter().router;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +22,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
             title: 'True Mech',
-            routeInformationParser:MyAppRouter().router.routeInformationParser ,
-            routerDelegate:MyAppRouter().router.routerDelegate ,
+            routerConfig: _appRouter,
           );
         }
     );

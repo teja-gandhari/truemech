@@ -103,7 +103,4 @@ class LoginPage extends StatelessWidget {
   static void _onGoogleButtonPress(){}
   static void _onAppleButtonPress(){}
   static void _onFacebookButtonPress(){}
-
-
-
 }

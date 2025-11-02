@@ -35,7 +35,7 @@ class SingUpScreen extends StatelessWidget {
                   controller: firstNameController,
                   nameHint: 'first name',
                   prefixIcon: Icons.person,
-                  keyboardType: TextInputType.none,
+                  keyboardType: TextInputType.text,
                 ),
                 const SizedBox(height: 4),
 
@@ -46,7 +46,7 @@ class SingUpScreen extends StatelessWidget {
                   controller: lastNameController,
                   nameHint: 'last name',
                   prefixIcon: Icons.person,
-                  keyboardType: TextInputType.none,
+                  keyboardType: TextInputType.text,
                 ),
                 const SizedBox(height: 4),
 
